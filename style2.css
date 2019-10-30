@@ -11,8 +11,45 @@
       height:500;
   }
   #board1 > div {
-      display: inline-block;
+    display: inline-block;
     border: 1px solid black;
 	width:50px;
-	height:50px;
+    height:50px;
+  }
+  .div1 {
+    margin-left:2.4rem;
+    font-size:1rem;
+    text-align: center;
+  }
+  .battleship {
+    position : absolute;
+    display: inline-block;
+    width: 200px;
+    height:50px;
+    border: 1px solid black;
+    background-color:rgb(156, 155, 155)
+  }
+  .cruiser {
+    position : absolute;
+    display: inline-block;
+    width: 150px;
+    height:50px;
+    border: 1px solid black;
+    background-color:rgb(156, 155, 155)
+  }
+  .destroyer {
+    position : absolute;
+    display: inline-block;
+    width: 100px;
+    height:50px;
+    border: 1px solid black;
+    background-color:rgb(228, 226, 226)
+  }
+  .submarine {
+    position : absolute;
+    display: inline-block;
+    width: 50px;
+    height:50px;
+    border: 1px solid black;
+    background-color:rgb(219, 212, 212)
   }
