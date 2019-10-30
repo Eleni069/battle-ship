@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  #board1 #board2 {
+      width : 500;
+      height:500;
+  }
+  #board1 > div {
+      display: inline-block;
+    border: 1px solid black;
+	width:50px;
+	height:50px;
+  }
