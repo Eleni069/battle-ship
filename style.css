@@ -1,63 +1,21 @@
-* {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-  }
-
-  body {
-    background-image: url("../puna/pic.jpg");
+table {
+  background-color: black;
+  border: 2px solid black;
+  float: left;
 }
 
-  h2 {
-    font-size:6rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    text-align: center;
+#board1s {
+  float: right;
+}
 
-  }
-  #container {
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    max-width: 800rem;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-  }
-  .flex-column {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .flex-center {
-    justify-content: center;
-    align-items: center;
-  }
-  .btn {
-    font-size: 1.8rem;
-    padding : 1rem 0;
-    width: 20rem;
-    text-align: center;
-    border: 0.1rem solid black;
-    border-radius: 10px;
-    margin-top: 5rem;
-    text-decoration: none;
-    color: black;
-    background-color: transparent;
-  }
-
-  .btn:hover {
-    cursor: pointer;
-    box-shadow: .2em .2em .5em rgb(48, 46, 46);
-    transform: translateY(-0.1rem);
-    transition:transform 150ms;
-    color :black
-  }
-  .btn[disabled]:hover {
-    cursor: not-allowed;
-    box-shadow: none;
-    transform: none;
-  }
+td {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+}
+th {
+  color:white
+}
+ .color {
+   background-color :black;
+ }

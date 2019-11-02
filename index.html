@@ -1,19 +1,305 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Battleship</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class = "container" >
-                <div id="home" class="flex-center flex-column">
-                        <h1>Battleship</h1>
-                            <a class="btn" href="start.html">Play</a>
-                </div>
-        </div>
-        <script nomodule src="build.js"></script>
-    </body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Battleship</title>
+  </head>
+  <body id="body">
+    <div id="boards">
+      <table id="board1">
+        <th>A</th>
+        <th>B</th>
+        <th>C</th>
+        <th>D</th>
+        <th>E</th>
+        <th>F</th>
+        <th>G</th>
+        <th>H</th>
+        <th>I</th>
+        <th>J</th>
+
+        <tr class="row1">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row2">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row3">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row4">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row5">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row6">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row7">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row8">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row9">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row10">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+      </table>
+
+      <table id="board1s">
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+            <th>E</th>
+            <th>F</th>
+            <th>G</th>
+            <th>H</th>
+            <th>I</th>
+            <th>J</th>
+
+        <tr class="row1">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row2">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row3">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row4">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row5">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row6">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row7">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row8">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row9">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <tr class="row10">
+          <td class="1"></td>
+          <td class="2"></td>
+          <td class="3"></td>
+          <td class="4"></td>
+          <td class="5"></td>
+          <td class="6"></td>
+          <td class="7"></td>
+          <td class="8"></td>
+          <td class="9"></td>
+          <td class="10"></td>
+        </tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+      </table>
+    </div>
+
+    <button id="Battleship">Battleship</button>
+    <button id="Submarine">Submarine</button>
+    <button id="Cruiser">Cruiser</button>
+    <button id="Destroyer">Destroyer</button>
+    <script src="battleship.js"></script>
+  </body>
 </html>
