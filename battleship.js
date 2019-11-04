@@ -31,12 +31,12 @@ var players = {
         "name":"submarine"
       },
       "cruiser":{
-        "length": 3,
+        "length": 2,
         "isPlaced": false,
         "name":"cruiser"
       },
       "destroyer":{
-        "length": 2,
+        "length": 1,
         "isPlaced": false,
         "name":"destroyer"
       }
@@ -67,6 +67,7 @@ var players = {
     }
   }
 }
+
 
 
  /* var rotation;
@@ -164,70 +165,202 @@ for(var i = 0; i < htmlX.length; i++){
 var hS = players.human.ships;
 var cS = players.cpu.ships;*/
 
-var battleship = document.getElementById('Battleship')
-var submarine = document.getElementById('Submarine')
-var cruiser = document.getElementById('Cruiser')
-var destroyer = document.getElementById('Destroyer')
 
-battleship.onclick = function() {
-  var length = players.human.ships.battleship.length
-  vend(length)
-}
-
-submarine.onclick = function() {
-  var length = players.human.ships.submarine.length
-  vend(length)
-}
-cruiser.onclick = function() {
-  var length = players.human.ships.cruiser.length
-  vend(length)
-}
-destroyer.onclick = function() {
-  var length = players.human.ships.destroyer.length
-  vend(length)
-}
-
-
-
- function vend (c) {
-    var css = '#board1 td:hover{ background-color: grey }'
+var css = '#board1 td:hover{  background-color: grey }'
     var style = document.createElement('style')
     style.innerHTML = css
     document.getElementById('body').appendChild(style)
 
 
+  var battleship = document.getElementById('Battleship')
+  var submarine = document.getElementById('Submarine')
+  var cruiser = document.getElementById('Cruiser')
+  var destroyer = document.getElementById('Destroyer')
+
+var battleshipnr = 0
+var submarinenr = 0
+var cruisernr = 0
+var destroyernr = 0
+var ke
+
+battleship.onclick = function() {
+
+  if (battleshipnr === 1 ) {
+    alert('you can not put more than one battleship')
+  }
+  else {
+  var length = players.human.ships.battleship.length
+  vend(length)
+  battleshipnr++
+  }
+}
+
+
+submarine.onclick = function() {
+
+  if ( submarinenr === 2) {
+    alert('you can not put more than two submarine')
+  }
+  else {
+  var length = players.human.ships.submarine.length
+  vend(length)
+  submarinenr++
+  }
+}
+
+
+cruiser.onclick = function() {
+  var ke
+  if ( cruisernr === 3) {
+    alert('you can not put more than three cruiser')
+  }
+  else {
+  var length = players.human.ships.cruiser.length
+  vend(length)
+  cruisernr++
+  }
+}
+
+
+destroyer.onclick = function() {
+  var ke
+  if ( destroyernr === 3) {
+    alert('you can not put more than four destroyer')
+  }
+  else {
+  var length = players.human.ships.destroyer.length
+  vend(length)
+  destroyernr++
+  }
+}
+
+
+
+
+ function vend(c, k = 0, nr = 0 ) {
+console.log(nr)
+  var approve
   //body.appendChild(battleshipArray)
   var a =  document.querySelectorAll('td')
-
-
    Array
     .from(a)
     .forEach(addEvent)
 
     function addEvent(element) {
-      k = 0
+
+     // ke = element
       element.addEventListener('click', () => {
-      k++
+          if ( nr === 0) {
+            ke = element
+            if ( confirm( " Vertical (OK) or Horizontal (Cancel)?")) {
+              approve = 'vertical'
+              if (ke.classList[0] === element.classList[0]) {
 
-        console.log(element.className)
-        if ( k === c) {
-         console.log('finish')
-         return
-        }
-        else {
+          k++
           console.log(k)
-      if (element.classList.contains('color') === true) {
-        alert("occupied!")
-        k--
-      }
-      else {
-        element.classList.add('color')
+          if ( k > c) {
+           console.log('finish')
+           alert('finish with this ship')
+          }
+         /* else {
+            if (element.classList.contains('color') === true) {
+              k--
+              alert('ocupied')
+        }*/
+        else {
+          element.classList.add('color')
+          ke = element
+          nr++
+           }
 
+        }
+      }
+        else { approve = 'horizontal'
+
+          if (ke.classList[1] === element.classList[1]) {
+            k++
+            if ( k > c) {
+             console.log('finish')
+            }
+           /* else {
+              if (element.classList.contains('color') === true) {
+                k--
+                alert('ocupied')
+          }*/
+          else {
+
+            element.classList.add('color')
+            ke = element
+            nr++
+
+        }
       }
     }
+  }
+        else {
+          if ( approve === 'vertical') {
+            if (ke.classList[0] === element.classList[0]) {
+              k++
+              if ( k > c) {
+               console.log('finish')
+              alert('finish with this ship')
+
+
+              }
+              else {
+                if (element.classList.contains('color') === true) {
+                  k--
+                  alert('ocupied')
+            }
+            else {
+
+              element.classList.add('color')
+
+              ke = element
+              nr++
+            }
+
+              }
+
+            }
+            else { alert ('Wrong square! Put it vertically.')}
+          }
+          else {
+            if (ke.classList[1] === element.classList[1]) {
+              k++
+              if ( k > c) {
+               console.log('finish')
+               alert('finish with this ship')
+              }
+              else {
+                if (element.classList.contains('color') === true) {
+                  k--
+                  alert('ocupied')
+            }
+            else {
+
+              element.classList.add('color')
+
+              ke = element
+              nr++
+            }
+
+              }
+
+            }
+            else { alert ('Wrong square! Put it horizontaly.')
+                event.stopPropagation()}
+
+          }
+        }
       })
+
+
     }
- }
+    }
+
+
+
 
 
 
